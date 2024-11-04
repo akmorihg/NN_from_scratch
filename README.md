@@ -171,3 +171,119 @@ And more interesting results. If we look at weights of the first layer, we can s
 ![weight](https://github.com/akmorihg/NN_from_scratch/blob/master/paper_weights_adam_optimizer_proper_lr_experiment/weights/weight_3.png?raw=true)
 
 As we see, 'PaperInitializer + Momentum weights' weights are meaningless, but 'PaperInitializer + Adam' weights are seems to have some meaning (or it is an artifact of learning process). When we choose proper learning_rate, again, the weights mostly lost their 'meaning'.
+
+## CNN
+CNN layer:
+
+- Filter size determined by (size of imput - size of output) + 1
+- Weights - 3D array where 2 dimensions for image, third dimension for filters
+- forward - get segment of an image and perform summation
+- backprop - perform backprop for convolution
+- update - Stochastic Gradient Descent
+
+MaxPoolLayer:
+
+- forward - get segment of an image and take max value
+- backprop - get maximum values from saved input
+- update - no update because no weights
+
+### Experiments
+#### First Experiment
+iterrations = 50 000
+
+learning rate = 0.01
+
+beta = 0.9
+
+Results:
+(epochs in this context means iterrations)
+
+![loss graph](https://github.com/akmorihg/NN_from_scratch/blob/master/cnn_50000_it/loss.png?raw=true)
+
+![acc graph](https://github.com/akmorihg/NN_from_scratch/blob/master/cnn_50000_it/results.png?raw=true)
+
+#### Second Experiment
+iterrations = 50 000
+
+learning rate = 0.01
+
+beta = 0.9
+
+Results:
+(epochs in this context means iterrations)
+
+![loss graph](https://github.com/akmorihg/NN_from_scratch/blob/master/cnn_60000_it/loss.png?raw=true)
+
+![acc graph](https://github.com/akmorihg/NN_from_scratch/blob/master/cnn_60000_it/results.png?raw=true)
+
+The results are compareable with Fully Connected NN. Fully Connected NN showed better results (about 0.5%), the probable answer is better weight optimization. In the case of Fully Connected NN, momentum optimizer was used, in the CNN case, just SGD was used, except last Softmax layer where momentum was used.
+
+If we look at the graph, we can see that there are no overfitting because validation loss (orange line) is higher than training loss (blue line).
+
+Another way to see, is CNN works correct or not is use Saliency via Occlusion. 2 Saliency via Occlusion performed: occlusion window 2x2 and 3x3.
+
+The results of Saliency via Occlusion:
+
+#### '0' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/0.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/0.png?raw=ture)
+
+#### '1' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/1.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/1.png?raw=ture)
+
+#### '2' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/2.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/2.png?raw=ture)
+
+#### '3' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/3.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/3.png?raw=ture)
+
+#### '4' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/4.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/4.png?raw=ture)
+
+#### '5' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/5.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/5.png?raw=ture)
+
+#### '6' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/6.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/6.png?raw=ture)
+
+#### '7' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/7.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/7.png?raw=ture)
+
+#### '8' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/8.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/8.png?raw=ture)
+
+#### '9' Digit
+3x3 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/9.png?raw=ture)
+2x2 occlusion window:
+![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/9.png?raw=ture)
+
+This results shows that CNN works pretty fine, because we can see pattern and we see if we remove important parts of digit, CNN can not classy correctly.
+
+Another interresting observation is 2x2 gives more detailed resuls rather than 3x3 occlusion window, may be this is not so surprising because 2x2 is smaller and can find more important parts of an image precisely.
