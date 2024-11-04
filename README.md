@@ -225,63 +225,103 @@ Another way to see, is CNN works correct or not is use Saliency via Occlusion. 2
 The results of Saliency via Occlusion:
 
 #### '0' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/0.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/0.png?raw=ture)
 
 #### '1' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/1.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/1.png?raw=ture)
 
 #### '2' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/2.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/2.png?raw=ture)
 
 #### '3' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/3.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/3.png?raw=ture)
 
 #### '4' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/4.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/4.png?raw=ture)
 
 #### '5' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/5.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/5.png?raw=ture)
 
 #### '6' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/6.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/6.png?raw=ture)
 
 #### '7' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/7.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/7.png?raw=ture)
 
 #### '8' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/8.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/8.png?raw=ture)
 
 #### '9' Digit
+
 3x3 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_3x3/avg_version/9.png?raw=ture)
+
 2x2 occlusion window:
+
 ![zero digit](https://github.com/akmorihg/NN_from_scratch/blob/master/occlusions_2x2/avg_version/9.png?raw=ture)
 
 This results shows that CNN works pretty fine, because we can see pattern and we see if we remove important parts of digit, CNN can not classy correctly.
