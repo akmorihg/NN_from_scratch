@@ -327,3 +327,33 @@ The results of Saliency via Occlusion:
 This results shows that CNN works pretty fine, because we can see pattern and we see if we remove important parts of digit, CNN can not classy correctly.
 
 Another interresting observation is 2x2 gives more detailed resuls rather than 3x3 occlusion window, may be this is not so surprising because 2x2 is smaller and can find more important parts of an image precisely.
+
+## RNN
+### Task 1: Sine Wave
+
+Firstty, I tried NN with architechture: Dense(10, 5) -> Dense(5, 1), and we tried to predict next sine value based on past 10.
+
+The results of Dense NN:
+![dense sine](https://github.com/akmorihg/NN_from_scratch/blob/master/dense_sine_result.png?raw=ture)
+As we can see, Dense NN can not predict negative values and trying to fill spaces between waves.
+
+Next model is RNN with architecture 10->5->1.
+
+And the results:
+![dense sine](https://github.com/akmorihg/NN_from_scratch/blob/master/sine_rnn_result.png?raw=ture)
+The RNN model is showing very nice results and can handle series of data in comparison with Dense NN.
+
+### Task 2: Dino Island
+At the first point I didn't get how this model should work.
+
+First, I tried to use vocab, fit converted names to model, and get results, decode and hope this will work. (but, it didn't work).
+
+Second, I tried char based model. (fit chars, get predicted char and again fit).
+
+The result:
+![rnn char](https://github.com/akmorihg/NN_from_scratch/blob/master/rnn_char_results.jpg?raw=ture)
+
+Interesting moments:
+- Even with same input, model show different results (first times)
+- After 2-3 iterrations, model gives same result for the same input
+- Model usually don't give names as in dino_island.txt
